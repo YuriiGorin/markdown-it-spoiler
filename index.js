@@ -85,7 +85,7 @@ const postProcess = (state, delimiters) => {
     const tokenO = state.tokens[startDelim.token]
     tokenO.type = "spoiler_open"
     tokenO.tag = "span"
-    tokenO.attrs = [["class", "spoiler"]]
+    tokenO.attrs = [["class", "spoiler-text"]]
     tokenO.nesting = 1
     tokenO.markup = "!!"
     tokenO.content = ""
@@ -99,7 +99,7 @@ const postProcess = (state, delimiters) => {
 
     if (
       state.tokens[endDelim.token - 1].type === "text" &&
-      state.tokens[endDelim.token - 1].content === "!"
+      state.tokens[endDelim.token - 1].content === "|"
     ) {
       loneMarkers.push(endDelim.token - 1)
     }
