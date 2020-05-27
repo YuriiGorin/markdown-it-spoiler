@@ -24,7 +24,7 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 'use strict'
-const exMark = 0x71 /* | */
+const exMark = 0x7c /* | */
 
 const tokenize = frontPriorMode => (state, silent) => {
   if (silent) return false
