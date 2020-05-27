@@ -87,14 +87,14 @@ const postProcess = (state, delimiters) => {
     tokenO.tag = "span"
     tokenO.attrs = [["class", "spoiler-text"]]
     tokenO.nesting = 1
-    tokenO.markup = "!!"
+    tokenO.markup = "||"
     tokenO.content = ""
 
     const tokenC = state.tokens[endDelim.token]
     tokenC.type = "spoiler_close"
     tokenC.tag = "span"
     tokenC.nesting = -1
-    tokenC.markup = "!!"
+    tokenC.markup = "||"
     tokenC.content = ""
 
     if (
